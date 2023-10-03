@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Expense Tracker</string>
+    <string name="balance_00_0">Balance ₹ 00.0</string>
+    <string name="Expense">Expense ₹ 00.0</string>
+    <string name="Income">Income ₹ 00.0</string>
+
+</resources>

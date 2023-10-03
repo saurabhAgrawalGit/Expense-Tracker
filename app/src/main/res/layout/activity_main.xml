@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5BFBD8 "
+
+    tools:context=".MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="wrap_content"
+                android:layout_height="350dp"
+
+                android:background="@drawable/wave"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="24dp"
+
+                android:layout_marginRight="14dp"
+                android:background="@drawable/gradient"
+                app:circularflow_radiusInDP="444dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/hankenbold"
+                android:text="@string/balance_00_0"
+
+                android:textColor="#E9EFEFEF"
+                android:textSize="50sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view2" />
+            <TextView
+                android:id="@+id/expense_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="2dp"
+
+                android:fontFamily="@font/gtwalsheimpro"
+                android:text="@string/Expense"
+                android:textColor="#EA4B4B"
+                android:textSize="40sp"
+                app:layout_constraintTop_toBottomOf="@id/income_tv"
+                app:layout_constraintStart_toStartOf="@id/view2"
+               />
+
+
+            <TextView
+                android:id="@+id/income_tv"
+                android:textSize="40sp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/gtwalsheimpro"
+                android:text="@string/Income"
+                android:textColor="#68EA8C"
+
+
+                app:layout_constraintStart_toStartOf="@id/view2"
+                app:layout_constraintTop_toBottomOf="@id/balance" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="14dp"
+                android:background="@drawable/gradient"
+                app:circularflow_radiusInDP="444dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view2" />
+
+            <Button
+                android:id="@+id/bt_expense"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:text="Income"
+
+
+                android:textColor="@color/green_10"
+                android:layout_marginLeft="8dp"
+                android:textSize="14dp"
+                android:letterSpacing="0.08"
+                android:textStyle="bold"
+                android:padding="0dp"
+                android:background="@drawable/mybutton"
+                android:fontFamily="@font/gtwalsheimpro"
+                app:layout_constraintBottom_toBottomOf="@+id/view3"
+                app:layout_constraintStart_toStartOf="@id/view3"
+               app:layout_constraintEnd_toStartOf="@id/bt_income"
+                app:layout_constraintTop_toTopOf="@+id/view3" />
+            <Button
+                android:id="@+id/bt_income"
+                android:layout_width="80dp"
+                android:textColor="@color/green_10"
+                android:layout_height="90dp"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintEnd_toStartOf="@id/bt_3"
+                android:background="@drawable/mybutton"
+                app:layout_constraintBottom_toBottomOf="@+id/view3"
+                app:layout_constraintStart_toEndOf="@id/bt_expense"
+
+                app:layout_constraintTop_toTopOf="@+id/view3" />
+            <Button
+                android:id="@+id/bt_3"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:textColor="@color/green_10"
+
+                android:layout_marginLeft="15dp"
+                app:layout_constraintEnd_toStartOf="@id/bt_4"
+                android:background="@drawable/mybutton"
+                app:layout_constraintBottom_toBottomOf="@+id/view3"
+                app:layout_constraintStart_toEndOf="@id/bt_income"
+                app:layout_constraintTop_toTopOf="@+id/view3" />
+
+            <Button
+                android:id="@+id/bt_4"
+                android:textColor="@color/green_10"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="8dp"
+
+                android:background="@drawable/mybutton"
+                app:layout_constraintBottom_toBottomOf="@+id/view3"
+                app:layout_constraintEnd_toEndOf="@+id/view3"
+                app:layout_constraintStart_toEndOf="@id/bt_3"
+                app:layout_constraintTop_toTopOf="@+id/view3" />
+
+
+            <View
+                android:id="@+id/view4"
+
+                android:layout_width="match_parent"
+                android:layout_height="800dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/gradient"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view3"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_contacts"
+                android:layout_width="360dp"
+                android:layout_height="820dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+
+                android:background="@android:color/transparent"
+
+                android:paddingBottom="25dp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/view4"
+                app:layout_constraintHorizontal_bias="0.086"
+                app:layout_constraintStart_toStartOf="@+id/view4"
+                app:layout_constraintTop_toTopOf="@+id/view4"
+                app:layout_constraintVertical_bias="1.0" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
